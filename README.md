@@ -1,87 +1,89 @@
-# Welcome to React Router!
+# Ugly but Organic
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A mobile-first web application that connects sellers of surplus
+and imperfect organic produce with buyers, helping reduce food
+waste and make organic food more affordable.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Developed as part of the Go Green frontend specialisation
+project at Business Academy Aarhus.
 
-## Features
+## Tech Stack
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- React
+- React Router (Framework Mode, SPA)
+- JavaScript
+- Tailwind CSS v4
+- Supabase
+- Vite
+- Netlify
 
 ## Getting Started
 
 ### Installation
 
-Install the dependencies:
+Install project dependencies:
 
 ```bash
 npm install
 ```
 
+### Environment Variables
+
+Create a `.env` file in the project root and add your
+Supabase credentials:
+
+```env
+VITE_SUPABASE_URL=your-project-url
+VITE_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
+```
+
+The `.env` file should not be committed to GitHub.
+
 ### Development
 
-Start the development server with HMR:
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+The application is available at http://localhost:5173.
 
-## Building for Production
-
-Create a production build:
+### Production Build
 
 ```bash
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+Preview the production build locally:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+npm run preview
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## Data Fetching
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+Data is fetched from Supabase using React Router's
+`clientLoader`. Database access is managed through
+Supabase permissions and Row Level Security (RLS).
 
-### DIY Deployment
+## Deployment
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+The application will be deployed on Netlify.
 
-Make sure to deploy the output of `npm run build`
+- Build command: `npm run build`
+- Publish directory: `build/client`
 
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
+Supabase environment variables must also be configured
+in Netlify.
 
-## Styling
+## Project Principles
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+- Mobile-first and responsive development
+- Accessibility and inclusive design
+- Sustainable and ethical design
+- Simple, readable and maintainable code
 
----
+## Project Status
 
-Built with ❤️ using React Router.
+In development.
